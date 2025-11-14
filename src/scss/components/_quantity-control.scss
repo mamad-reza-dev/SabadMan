@@ -1,0 +1,27 @@
+.quantity-control {
+  border-radius: radius(lg);
+  border: 1px solid color(border);
+  @include flex($align: center, $justify: space-between);
+  &__btn {
+    padding: space(2);
+    &--delete {
+      color: color('error-foreground');
+    }
+    &--increase {
+    }
+    &--decrease {
+    }
+  }
+
+  &__btn-icon {
+    @include size($width: 4, $height: 4);
+  }
+
+  &__value {
+    flex-grow: 1;
+    display: block;
+    @include size($width: 4);
+    text-align: center;
+    @include font-style($size: sm);
+  }
+}

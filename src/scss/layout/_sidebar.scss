@@ -1,0 +1,18 @@
+.sidebar {
+  left: 0;
+  inset-block: 0;
+  position: fixed;
+  z-index: z('50');
+  @include size($width: 100);
+  transform: translateX(-100%);
+  background-color: color(card-background);
+  transition: transform transition-duration(normal) ease-in-out;
+
+  &--open {
+    transform: translateX(0);
+  }
+
+  @include respond(sm) {
+    @include size($width: full);
+  }
+}

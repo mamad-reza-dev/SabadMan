@@ -1,0 +1,30 @@
+{
+  "name": "sabadman",
+  "description": "ready",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mamad-reza-dev/SabadMan"
+  },
+  "author": {
+    "name": "Mohammad Reza zare",
+    "email": "0mmrzzare0@gmail.com",
+    "url": "https://github.com/mamad-reza-dev"
+  },
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "format": "prettier --write \"src/**/*.{js,ts,jsx,tsx,scss,css,html,json,md}\""
+  },
+  "devDependencies": {
+    "fast-glob": "^3.3.3",
+    "prettier": "^3.6.2",
+    "sass-embedded": "^1.93.2",
+    "typescript": "~5.9.3",
+    "vite": "^7.1.7",
+    "vite-plugin-svg-icons": "^2.0.1"
+  }
+}

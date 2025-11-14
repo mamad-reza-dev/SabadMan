@@ -1,0 +1,11 @@
+.icon {
+  fill: currentColor;
+  color: currentColor;
+  display: inline-block;
+  vertical-align: middle;
+  @include size($width: 6, $height: 6);
+
+  @include respond(sm) {
+    @include size($width: 5, $height: 5);
+  }
+}

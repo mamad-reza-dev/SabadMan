@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>سبدمن</title>
+      <link rel="stylesheet"
+            href="/src/scss/main.scss">
+  </head>
+  <body>
+    <header class="header">
+        <div class="container flex items-center justify-between">
+            <h1 class="header__title">
+                <a class="header__title-link" href="#">
+                    <svg class="icon header__logo">
+                        <use href="#icon-logo"></use>
+                    </svg>
+                    سبدمن
+                </a>
+            </h1>
+            <button id="open-cart-sidebar" class="button button--square button--ghost header__cart-btn" aria-label="سبد خرید">
+                <span id="cart-badge" class="header__cart-badge header__cart-badge--hidden"></span>
+                <svg class="icon header__cart-btn-icon">
+                    <use href="#icon-shopping-bag"></use>
+                </svg>
+            </button>
+        </div>
+    </header>
+    <main class="products container">
+        <h2 class="products__title">جدیدترین محصولات ما</h2>
+        <p class="products__subtitle">ترکیبی از طراحی ساده، کیفیت بالا و سبک معاصر</p>
+        <section class="products__list" id="product-list"></section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+                <a class="footer__title" href="https://github.com/mamad-reza-dev/SabadMan" target="_blank">
+                    <svg class="icon footer__logo">
+                        <use href="#icon-github"></use>
+                    </svg>
+                    مشاهده سورس کد پروژه
+                </a>
+        </div>
+    </footer>
+    <aside class="sidebar cart" id="cart-sidebar">
+        <header class="cart__heading">
+            <h2 class="cart__title">سبد خرید</h2>
+            <button id="close-cart-sidebar" class="cart__close-btn button button--square button--ghost" aria-label="بستن سبد خرید">
+                <svg class="icon cart__close-btn-icon">
+                    <use href="#icon-x-mark"></use>
+                </svg>
+            </button>
+        </header>
+        <section class="cart__content" id="cart-items">
+            <div data-role="empty-state" class="cart__empty">
+                <svg class="icon cart__empty-icon">
+                    <use href="#icon-shopping-bag"></use>
+                </svg>
+                <p class="cart__empty-text"> سبد خرید شما خالی است. </p>
+            </div>
+        </section>
+        <footer class="cart__footer" id="cart-footer">
+
+        </footer>
+    </aside>
+    <div class="overlay overlay--hidden" id="overlay"></div>
+    <div class="notification" id="notification"></div>
+    <script type="module" src="/src/scripts/controller.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+.col-span-full {
+  grid-column: 1 / -1;
+}
+
+.row-span-full {
+  grid-row: 1 / -1;
+}
+
+.span-full {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+}

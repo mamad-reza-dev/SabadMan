@@ -1,0 +1,73 @@
+@mixin respond($breakpoint) {
+  @media (max-width: map-get($breakpoints , $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin font-style(
+  $size: null,
+  $line-height: null,
+  $weight: null,
+  $family: null,
+  $align: null,
+  $decoration: null
+) {
+  @if $family != null {
+    font-family: $font-family-base;
+  }
+
+  @if $size != null {
+    font-size: font-size($size);
+  }
+
+  @if $line-height != null {
+    line-height: $line-height;
+  }
+
+  @if $weight != null {
+    font-weight: font-weight($weight);
+  }
+
+  @if $align != null {
+    text-align: $align;
+  }
+
+  @if $decoration != null {
+    text-decoration: $decoration;
+  }
+}
+
+@mixin flex($dir: null, $justify: null, $align: null, $wrap: null, $gap: null) {
+  display: flex;
+
+  @if $dir != null {
+    flex-direction: $dir;
+  }
+  @if $justify != null {
+    justify-content: $justify;
+  }
+  @if $align != null {
+    align-items: $align;
+  }
+  @if $wrap != null {
+    flex-wrap: $wrap;
+  }
+  @if $gap != null {
+    gap: space($gap);
+  }
+}
+
+@mixin size($width: null, $height: null) {
+  @if $width != null {
+    width: size($width);
+  }
+  @if $height != null {
+    height: size($height);
+  }
+}
+
+@mixin hover-active {
+  &:hover:not(:disabled):not(.disabled):not(&--disabled) {
+    @content;
+  }
+}

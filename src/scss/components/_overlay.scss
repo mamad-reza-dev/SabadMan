@@ -1,0 +1,11 @@
+.overlay {
+  inset: 0;
+  z-index: z('40');
+  position: fixed;
+  backdrop-filter: blur(10px);
+  background-color: adjust-color(color(background), $alpha: -0.6);
+  transition: opacity transition-duration(normal) $transition-timing-default;
+  &--hidden {
+    display: none;
+  }
+}

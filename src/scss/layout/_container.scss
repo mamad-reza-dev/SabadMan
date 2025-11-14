@@ -1,0 +1,22 @@
+.container {
+  @include size($width: full);
+  max-width: map-get($breakpoints, xl);
+  margin-inline: auto;
+  padding-inline: calc(8px + 1.5625vw);
+
+  @include respond(lg) {
+    max-width: map-get($breakpoints, lg);
+  }
+
+  @include respond(md) {
+    max-width: map-get($breakpoints, md);
+  }
+
+  @include respond(sm) {
+    max-width: map-get($breakpoints, sm);
+  }
+
+  @include respond(xs) {
+    max-width: 100%;
+  }
+}

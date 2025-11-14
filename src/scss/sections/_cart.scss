@@ -1,0 +1,74 @@
+.cart {
+  @include flex($dir: column);
+  @include size($width: 100%);
+  &__heading {
+    padding: space(4);
+    border-bottom: 1px solid color(border);
+    @include flex($align: center, $justify: space-between);
+  }
+  &__title {
+    @include font-style($size: lg, $weight: medium);
+
+    @include respond(md) {
+      @include font-style($size: base);
+    }
+
+    @include respond(sm) {
+      @include font-style($size: sm);
+    }
+  }
+  &__content {
+    flex-grow: 1;
+    gap: space(4);
+    overflow-y: auto;
+    padding: space(4);
+    @include size($height: full);
+    @include flex($dir: column, $gap: 4);
+  }
+  &__empty {
+    @include size($height: full);
+    @include flex($dir: column, $align: center, $justify: center, $gap: 3);
+  }
+  &__empty-icon {
+    color: color('muted-foreground');
+    @include size($width: 12, $height: 12);
+  }
+  &__empty-text {
+    color: color('muted-foreground');
+
+    @include respond(md) {
+      @include font-style($size: sm);
+    }
+  }
+  &__footer {
+  }
+  &__footer-container {
+    padding: space(4);
+    border: 1px solid color(border);
+  }
+  &__footer-summary {
+    margin-bottom: space(4);
+    @include flex($align: center, $justify: space-between);
+  }
+  &__footer-label {
+    @include font-style($weight: medium);
+
+    @include respond(md) {
+      @include font-style($size: sm);
+    }
+  }
+  &__footer-value {
+    @include font-style($size: xl, $weight: bold);
+
+    @include respond(md) {
+      @include font-style($size: lg, $weight: bold);
+    }
+
+    @include respond(sm) {
+      @include font-style($size: base, $weight: bold);
+    }
+  }
+  &__footer-checkout-btn {
+    @include size($width: full);
+  }
+}

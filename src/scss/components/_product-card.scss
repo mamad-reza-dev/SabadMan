@@ -1,0 +1,140 @@
+.product-card {
+  height: 100%;
+  overflow: hidden;
+  border-radius: radius(xl);
+  color: color('card-foreground');
+  border: 1px solid color(border);
+  box-shadow:
+    0 1px 3px 0 oklch(0 0 0 / 10%),
+    0 1px 2px -1px oklch(0 0 0 / 10%);
+  background-color: color(card-background);
+  @include flex($dir: column);
+  @include size($width: full);
+  &__thumbnail {
+    object-fit: cover;
+    aspect-ratio: 1/1.15;
+    @include size($width: full, $height: 100);
+    @include respond(sm) {
+      aspect-ratio: 1/1.25;
+    }
+  }
+
+  &__image {
+    object-fit: cover;
+    @include size($width: full, $height: full);
+  }
+
+  &__controls {
+    flex: 1;
+    @include flex($dir: column);
+  }
+
+  &__content {
+    padding: space(6);
+    @include flex($dir: column, $align: flex-start);
+
+    @include respond(md) {
+      padding: space(5);
+    }
+
+    @include respond(sm) {
+      padding: space(4);
+    }
+  }
+
+  &__title {
+    margin-bottom: space(2);
+    @include font-style($size: lg, $weight: medium);
+
+    @include respond(md) {
+      margin-bottom: space(1);
+      @include font-style($size: base);
+    }
+
+    @include respond(sm) {
+      @include font-style($size: sm);
+    }
+  }
+
+  &__desc {
+    min-height: size(12);
+    margin-bottom: space(4);
+    @include font-style($size: sm);
+    color: color('muted-foreground');
+
+    @include respond(md) {
+      min-height: size(10);
+      margin-bottom: space(3);
+    }
+
+    @include respond(sm) {
+      min-height: size(8);
+      margin-bottom: space(2);
+      @include font-style($size: xs);
+    }
+  }
+
+  &__stock {
+    border-radius: radius(md);
+    padding: space(2) space(3);
+    @include font-style($size: sm, $align: center);
+
+    @include respond(sm) {
+      padding: space(1) space(2);
+      @include font-style($size: xs);
+    }
+
+    &--out {
+      color: color('muted-foreground');
+      background-color: color('muted-background');
+    }
+    &--low {
+      @include font-style($weight: bold);
+      color: color('error-foreground');
+      background-color: color('error-background');
+    }
+    &--exist {
+      color: color('success-foreground');
+      background-color: color('success-background');
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+    padding: space(6);
+    @include flex($align: center, $justify: space-between, $gap: 2);
+
+    @include respond(md) {
+      padding: space(5);
+    }
+
+    @include respond(sm) {
+      padding: space(4);
+    }
+  }
+
+  &__price {
+    @include font-style($size: xl, $weight: bold);
+
+    @include respond(lg) {
+      @include font-style($size: lg);
+    }
+
+    @include respond(sm) {
+      @include font-style($size: base);
+    }
+  }
+
+  &__btn {
+    @include size($height: 12);
+    @include respond(md) {
+      @include font-style($size: sm);
+    }
+    @include respond(sm) {
+      @include font-style($size: xs);
+    }
+  }
+  &__quantity-control {
+    @include size($height: 12);
+  }
+}

@@ -1,0 +1,132 @@
+/* ======< Colors >====== */
+$base-color: (
+  cream: oklch(0.98 0.005 85),
+  teal: oklch(0.55 0.18 180),
+  charcoal: oklch(0.2 0.02 85),
+  gray-light: oklch(0.88 0.01 85),
+  gray-medium: oklch(0.5 0.02 85),
+  white: oklch(1 0 0),
+  red: oklch(0.75 0.2 25),
+);
+$semantic-color: (
+  background: map-get($base-color, cream),
+  foreground: map-get($base-color, charcoal),
+  primary: map-get($base-color, white),
+  primary-background: map-get($base-color, teal),
+  secondary: map-get($base-color, 'gray-light'),
+  secondary-background: map-get($base-color, charcoal),
+  success-foreground: map-get($base-color, teal),
+  success-background: oklch(0.95 0.03 180),
+  muted-foreground: map-get($base-color, 'gray-medium'),
+  muted-background: map-get($base-color, gray-light),
+  error-foreground: map-get($base-color, red),
+  error-background: oklch(0.97 0.03 40),
+  card-background: map-get($base-color, white),
+  card-foreground: map-get($base-color, charcoal),
+  border: map-get($base-color, 'gray-light'),
+  glass-border: oklch(0.88 0.01 85 / 80%),
+);
+/* ======< Space Scale (base 4) >====== */
+$space-scale: (
+  1: 0.4rem,
+  2: 0.8rem,
+  3: 1.2rem,
+  4: 1.6rem,
+  5: 2rem,
+  6: 2.4rem,
+  7: 2.8rem,
+  8: 3.2rem,
+  9: 3.6rem,
+  10: 4rem,
+  12: 4.8rem,
+  16: 6.4rem,
+  20: 8rem,
+  24: 9.6rem,
+);
+/* ======< Size Scale (base 4) >====== */
+$size-scale: (
+  0: 0,
+  1: 0.4rem,
+  2: 0.8rem,
+  3: 1.2rem,
+  4: 1.6rem,
+  5: 2rem,
+  6: 2.4rem,
+  7: 2.8rem,
+  8: 3.2rem,
+  9: 3.6rem,
+  10: 4rem,
+  12: 4.8rem,
+  16: 6.4rem,
+  20: 8rem,
+  22: 8.8rem,
+  24: 9.6rem,
+  26: 10.4rem,
+  28: 11.2rem,
+  32: 12.8rem,
+  100: 40rem,
+  full: 100%,
+);
+/* ======< Border Radius >====== */
+$radius: (
+  none: 0,
+  sm: 0.125rem,
+  md: 0.375rem,
+  lg: 0.5rem,
+  xl: 0.75rem,
+  '2xl': 1rem,
+  '3xl': 1.5rem,
+  full: 9999px,
+);
+/* ======< Typography >====== */
+$font-family-fallback: Arial, Helvetica, sans-serif;
+$font-family-base: 'Vazirmatn', $font-family-fallback;
+
+$line-height-base: 1.5;
+
+$font-weight: (
+  regular: 400,
+  medium: 600,
+  bold: 800,
+);
+
+$font-sizes: (
+  xs: 1.2rem,
+  sm: 1.4rem,
+  base: 1.6rem,
+  lg: 1.8rem,
+  xl: 2rem,
+  '2xl': 2.4rem,
+  '3xl': 3rem,
+  '4xl': 3.6rem,
+  '5xl': 4.8rem,
+  '6xl': 6rem,
+  '7xl': 7.2rem,
+  '8xl': 9.6rem,
+);
+/* ======< Breakpoints >====== */
+$breakpoints: (
+  xl: 1200px,
+  lg: 1024px,
+  md: 768px,
+  sm: 480px,
+  xs: 320px,
+);
+/* ======< Z-index >====== */
+$z-index-scale: (
+  'auto': auto,
+  '0': 0,
+  '10': 10,
+  '20': 20,
+  '30': 30,
+  '40': 40,
+  '50': 50,
+);
+/* ======< Transition >====== */
+$transition-duration: (
+  fast: 0.15s,
+  normal: 0.3s,
+  slow: 0.7s,
+);
+
+$transition-timing-default: ease;

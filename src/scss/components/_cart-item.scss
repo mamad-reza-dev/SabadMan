@@ -1,0 +1,81 @@
+.cart-item {
+  display: grid;
+  padding: space(4);
+  gap: space(3) space(4);
+  border-radius: radius(md);
+  grid-template-rows: auto;
+  border: 1px solid color(border);
+  grid-template-columns: size(22) 1fr;
+
+  @include respond(sm) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    text-align: center;
+  }
+
+  &__thumbnail {
+    overflow: clip;
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+    border-radius: radius(xl);
+    @include size($width: 22, $height: 22);
+
+    @include respond(sm) {
+      grid-row: 1;
+      grid-column: 1;
+      margin-inline: auto;
+    }
+  }
+  &__image {
+    object-fit: cover;
+    @include size($width: full, $height: full);
+  }
+  &__details {
+    grid-row: 1 / 2;
+    grid-column: 2 / -1;
+    @include flex($dir: column, $justify: space-between);
+
+    @include respond(sm) {
+      grid-row: 2;
+      grid-column: 1;
+      align-items: center;
+    }
+  }
+  &__title {
+    @include font-style($weight: medium);
+
+    @include respond(md) {
+      @include font-style($size: base);
+    }
+
+    @include respond(sm) {
+      margin-bottom: size(1);
+      @include font-style($size: sm);
+    }
+  }
+  &__stock {
+    @include font-style($size: sm);
+
+    @include respond(sm) {
+      @include font-style($size: xs);
+    }
+  }
+
+  &__calc-price {
+    @include flex($align: center, $gap: 3);
+
+    @include respond(sm) {
+      margin-top: size(2);
+      @include flex($align: center, $gap: 1);
+    }
+  }
+
+  &__total-price {
+    @include size($width: 26);
+    @include respond(sm) {
+      @include font-style($size: sm);
+    }
+  }
+  &_quantity-control {
+  }
+}

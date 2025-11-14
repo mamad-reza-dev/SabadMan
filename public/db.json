@@ -1,0 +1,113 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "کفش اسپرت مردانه",
+      "price": 1299000,
+      "description": "کفشی سبک و راحت برای استفاده روزمره و فعالیت‌های ورزشی.",
+      "category": "پوشاک",
+      "stock": 0,
+      "image_url": "/pictures/mens-sports-shoes.webp"
+    },
+    {
+      "id": 2,
+      "title": "کیف چرمی زنانه",
+      "price": 890000,
+      "description": "کیف دستی از چرم طبیعی با طراحی ساده و شیک.",
+      "category": "اکسسوری",
+      "stock": 8,
+      "image_url": "/pictures/womens-leather-bag.webp"
+    },
+    {
+      "id": 3,
+      "title": "ساعت مچی کلاسیک",
+      "price": 1590000,
+      "description": "ساعتی با بند چرمی و طراحی مینیمال برای استایل رسمی و روزمره.",
+      "category": "اکسسوری",
+      "stock": 20,
+      "image_url": "/pictures/classic-wristwatch.webp"
+    },
+    {
+      "id": 4,
+      "title": "هدفون بی‌سیم بلوتوثی",
+      "price": 749000,
+      "description": "هدفون با صدای شفاف، باتری بادوام و طراحی ارگونومیک.",
+      "category": "دیجیتال",
+      "stock": 30,
+      "image_url": "/pictures/wireless-bluetooth-headphones.webp"
+    },
+    {
+      "id": 5,
+      "title": "ماگ سرامیکی طرح خاص",
+      "price": 129000,
+      "description": "ماگی مقاوم با لعاب براق مناسب برای نوشیدنی‌های گرم و سرد.",
+      "category": "لوازم منزل",
+      "stock": 42,
+      "image_url": "/pictures/special-design-ceramic-mug.webp"
+    },
+    {
+      "id": 6,
+      "title": "چراغ مطالعه رومیزی مدرن",
+      "price": 379000,
+      "description": "چراغ مطالعه با طراحی مینیمال، نور قابل تنظیم و پایه فلزی مقاوم.",
+      "category": "لوازم منزل",
+      "stock": 17,
+      "image_url": "/pictures/modern-desk-reading-lamp.webp"
+    },
+    {
+      "id": 7,
+      "title": "عطر زنانه رایحه گل‌های سفید",
+      "price": 589000,
+      "description": "عطری ماندگار و ملایم مناسب استفاده روزانه.",
+      "category": "آرایشی و بهداشتی",
+      "stock": 18,
+      "image_url": "/pictures/womens-perfume-with-the-scent-of-white-flowers.webp"
+    },
+    {
+      "id": 8,
+      "title": "کوله‌پشتی لپ‌تاپ ضدآب",
+      "price": 659000,
+      "description": "کوله‌پشتی با محفظه ضدضربه برای لپ‌تاپ و وسایل روزمره.",
+      "category": "اکسسوری",
+      "stock": 16,
+      "image_url": "/pictures/laptop-backpack.webp"
+    },
+    {
+      "id": 9,
+      "title": "کتونی زنانه فوم‌دار",
+      "price": 1149000,
+      "description": "کتونی سبک با کفی نرم و انعطاف‌پذیر برای پیاده‌روی.",
+      "category": "پوشاک",
+      "stock": 22,
+      "image_url": "/pictures/womens-foam=cushioned-cotton-shoes.webp"
+    },
+    {
+      "id": 10,
+      "title": "قاب موبایل سیلیکونی",
+      "price": 79000,
+      "description": "قاب محافظ نرم با پوشش ضدلغزش برای انواع گوشی‌ها.",
+      "category": "دیجیتال",
+      "stock": 50,
+      "image_url": "/pictures/silicone-mobile-phone-case.webp"
+    },
+    {
+      "id": 11,
+      "title": "کت جین کلاسیک",
+      "price": 749000,
+      "description": "کت جین با دوخت مقاوم و رنگ آبی خاص برای استایل اسپرت.",
+      "category": "پوشاک",
+      "stock": 12,
+      "image_url": "/pictures/classic-denim-jacket.webp"
+    },
+    {
+      "id": 12,
+      "title": "شمع معطر لاوندر",
+      "price": 159000,
+      "description": "شمعی با رایحه آرامش‌بخش اسطوخودوس برای محیط خانه.",
+      "category": "دکوراتیو",
+      "stock": 27,
+      "image_url": "/pictures/lavender-scented-candle.webp"
+    }
+  ]
+}
+

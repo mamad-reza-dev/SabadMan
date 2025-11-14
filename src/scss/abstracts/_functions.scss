@@ -1,0 +1,37 @@
+@function color($key) {
+  @if map-has-key($semantic-color, $key) {
+    @return map-get($semantic-color, $key);
+  } @else if map-has-key($base-color, $key) {
+    @return map-get($base-color, $key);
+  } @else {
+    @error "Color `#{$key}` not found in semantic-color or base-color!";
+  }
+}
+
+@function space($key) {
+  @return map-get($space-scale, $key);
+}
+
+@function size($key) {
+  @return map-get($size-scale, $key);
+}
+
+@function radius($key) {
+  @return map-get($radius, $key);
+}
+
+@function font-size($key) {
+  @return map-get($font-sizes, $key);
+}
+
+@function font-weight($key) {
+  @return map-get($font-weight, $key);
+}
+
+@function z($key) {
+  @return map-get($z-index-scale, $key);
+}
+
+@function transition-duration($key) {
+  @return map-get($transition-duration, $key);
+}

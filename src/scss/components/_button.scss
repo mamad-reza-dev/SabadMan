@@ -1,0 +1,89 @@
+.button {
+  border-radius: radius(md);
+  padding: space(3) space(4);
+  @include flex($align: center, $justify: center, $gap: 2);
+  transition:
+    background-color transition-duration(normal) $transition-timing-default,
+    color transition-duration(normal) $transition-timing-default;
+
+  background-color: transparent;
+
+  &:active {
+    transform: scale(0.96);
+  }
+
+  @include respond(md) {
+    padding: space(2) space(3);
+  }
+
+  @include respond(sm) {
+    padding: space(2) space(2);
+  }
+
+  &:disabled,
+  &.button--disabled {
+    opacity: 0.4;
+    transform: none;
+    box-shadow: none;
+    cursor: not-allowed;
+    pointer-events: none;
+    filter: grayscale(20%);
+  }
+
+  &--square {
+    aspect-ratio: 1 / 1;
+    padding: 0;
+    @include size($width: 10);
+
+    @include respond(md) {
+      @include size($width: 9);
+    }
+
+    @include respond(sm) {
+      @include size($width: 8);
+    }
+  }
+
+  &--primary {
+    color: color('primary');
+    background-color: color('primary-background');
+
+    @include hover-active {
+      background-color: adjust-color(color('primary-background'), $lightness: 10%);
+    }
+
+    &:disabled,
+    &--disabled {
+      color: color-mix(in oklch, color('primary'), white 80%);
+      background-color: color-mix(in oklch, color('primary-background'), white 70%);
+    }
+  }
+
+  &--secondary {
+    color: color('secondary');
+    background-color: color('secondary-background');
+
+    @include hover-active {
+      background-color: adjust-color(color('secondary-background'), $lightness: 10%);
+    }
+  }
+
+  &--ghost {
+    color: color('charcoal');
+    background-color: transparent;
+
+    @include hover-active {
+      color: color(white);
+      background-color: color(teal);
+    }
+  }
+
+  &--danger {
+    color: color('error-foreground');
+    background-color: color('error-background');
+    &:hover {
+      background-color: color('error-foreground');
+      color: color('primary');
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.loader {
+  margin: space(10) auto;
+  border-radius: 50%;
+  border: 0.6rem solid color(secondary);
+  @include size($width: 16, $height: 16);
+  border-top-color: color('success-foreground');
+  animation: spin map-get($transition-duration, slow) linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

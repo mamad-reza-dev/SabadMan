@@ -1,0 +1,32 @@
+html {
+  font-size: 62.5%; // 1rem === 10px
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  @include font-style($decoration: none);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  @include font-style($family: inherit);
+}
+
+body {
+  color: color(foreground);
+  background-color: color(background);
+  @include font-style(
+    $size: base,
+    $line-height: $line-height-base,
+    $weight: regular,
+    $family: $font-family-base
+  );
+}
